@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+import os
+import pkg_resources
+sys.path.append('../')
+sys.path.append('./')
+from  prokka.Prokka import Prokka
+from  prokka.InputTypes import InputTypes
+
+'''The main entry point for running Prokka. All the work is done in the classes.'''
+
+version = ''
+try:
+	version = pkg_resources.get_distribution("prokka").version
+except pkg_resources.DistributionNotFound:
+	version = 'x.y.z'
+
+parser = argparse.ArgumentParser(
+	description = 'Fast annotation',
+	usage = 'prokka [options] output_directory *.fastq.gz')
+parser.add_argument('input_files', help='FASTQ/FASTA files which may be gzipped', nargs='+', type=InputTypes.is_fasta_valid)
+parser.add_argument('--threads',                     '-t', help='Number of threads [%(default)s]', type=InputTypes.is_threads_valid,  default = 1)
+parser.add_argument('--verbose',                     '-v', action='store_true', help='Turn on more debugging output [%(default)s]')
+parser.add_argument('--version', action='version', version=str(version))
+
+options = parser.parse_args()
+
+prokka = Prokka(options)
+prokka.run()
