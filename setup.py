@@ -20,7 +20,7 @@ setup(
 	package_data={'prokka': ['example_data/fastas/*']},
     author='Andrew J. Page',
     author_email='path-help@sanger.ac.uk',
-    url='https://github.com/microbial_bioinformatics/prokka',
+    url='https://github.com/microbial-bioinformatics/prokka',
     scripts=glob.glob('scripts/*'),
     test_suite='nose.collector',
     tests_require=['nose >= 1.3'],

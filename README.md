@@ -3,7 +3,7 @@
 
 # Introduction
 
-[![Build Status](https://travis-ci.org/microbial_bioinformatics/prokka.svg?branch=master)](https://travis-ci.org/microbial_bioinformatics/prokka)
+[![Build Status](https://travis-ci.org/microbial-bioinformatics/prokka.svg?branch=master)](https://travis-ci.org/microbial-bioinformatics/prokka)
 
 # Usage 
 ```
@@ -39,7 +39,7 @@ There are a number of installation methods. Choosing the right one for the syste
 Install [Docker](https://www.docker.com/).  We have a docker container which gets automatically built from the latest version of Prokka. To install it:
 
 ```
-docker pull microbial_bioinformatics/prokka
+docker pull microbial-bioinformatics/prokka
 ```
 
 To use it you would use a command such as this (substituting in your directories), where your files are assumed to be stored in /home/ubuntu/data:
@@ -53,7 +53,7 @@ Install [Anaconda](https://www.continuum.io/downloads) with Python 3. Then insta
 ```
 conda config --add channels bioconda
 conda install git
-pip install git+git://github.com/microbial_bioinformatics/prokka.git
+pip install git+git://github.com/microbial-bioinformatics/prokka.git
 ```
 
 ## Linux
@@ -63,7 +63,7 @@ The instructions for Linux assume you have root (sudo) on your machine.
 ```
 apt-get update -qq
 apt-get install -y git python3 python3-setuptools python3-biopython python3-pip
-pip3 install git+git://github.com/microbial_bioinformatics/prokka.git
+pip3 install git+git://github.com/microbial-bioinformatics/prokka.git
 ```
 
 ### Linuxbrew
@@ -73,7 +73,7 @@ First install [LinuxBrew](http://linuxbrew.sh/), then follow the instructions be
 brew tap homebrew/science
 brew update
 brew install python3
-pip3 install git+git://github.com/microbial_bioinformatics/prokka.git
+pip3 install git+git://github.com/microbial-bioinformatics/prokka.git
 ```
 
 ## OSX
@@ -85,6 +85,6 @@ First install [HomeBrew](http://brew.sh/), then follow the instructions below.
 brew tap homebrew/science
 brew update
 brew install python3
-pip3 install git+git://github.com/microbial_bioinformatics/prokka.git
+pip3 install git+git://github.com/microbial-bioinformatics/prokka.git
 ```
 
